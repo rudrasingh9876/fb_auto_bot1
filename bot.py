@@ -1,3 +1,5 @@
+print(f"DEBUG PAGE_ID: {PAGE_ID}")
+print(f"DEBUG TOKEN START: {TOKEN[:25]}")
 import os, requests, random
 from PIL import Image, ImageDraw, ImageFont
 
