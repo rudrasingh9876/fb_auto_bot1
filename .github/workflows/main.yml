@@ -1,20 +1,18 @@
 name: Auto FB Post
 on:
   schedule:
-        - cron: '0 * * * *'
+    - cron: '0 * * * *'
   workflow_dispatch:
 jobs:
-  post:
+  post: mathquiz
     runs-on: ubuntu-latest
     steps:
-            - uses: actions/checkout@v3
-            - uses: actions/setup-python@v4
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
         with:
           python-version: '3.9'
-            - name: Install libs
-        run: pip install Pillow requests
-            - name: Run Bot
-        env:
+      - run: pip install Pillow requests
+      - env:
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
           FB_TOKEN: ${{ secrets.FB_TOKEN }}
         run: python bot.py
