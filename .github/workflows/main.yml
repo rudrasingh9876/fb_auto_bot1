@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 jobs:
   mathquiz:
-      runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
